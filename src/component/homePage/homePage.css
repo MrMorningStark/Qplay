@@ -1,0 +1,21 @@
+#homePage {
+  margin: 20px 20px;
+}
+
+.carousel-indicators button {
+  margin: 0 10px !important;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #000 !important;
+  border-radius: 50%;
+}
+
+.card-img {
+  border-radius: 10px;
+  height: 12rem;
+}
+
+.marlr {
+  margin-left: 10px;
+  margin-right: 10px;
+}
