@@ -1,0 +1,32 @@
+.carousel-indicators li {
+  margin: 0 10px !important;
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #000 !important;
+  border-radius: 50%;
+}
+
+.card-img {
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .4s;
+  transform: scale(0.9);
+
+}
+.card-img:hover {
+  border-radius: 10px;
+  transform: scale(1);
+}
+
+#carouselExampleIndicators1{
+  padding-bottom: 10px;
+}
+
+.round-img{
+  border-radius: 30px;
+  aspect-ratio: 32/9;
+}
+
+.img-focused{
+  border: 5px solid black;
+}
