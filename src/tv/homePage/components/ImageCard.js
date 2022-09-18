@@ -1,14 +1,28 @@
 import { useNavigate } from "react-router-dom";
 import './homePage.css'
-// import { useFocusable } from '@noriginmedia/norigin-spatial-navigation';
-import { useFocusable, FocusContext } from '@noriginmedia/norigin-spatial-navigation';
+import { useFocusable } from '@noriginmedia/norigin-spatial-navigation';
+
 const ImageCard = (props) => {
-    const { ref, focusKey } = useFocusable();
+    const {onFocus, asset} = props; 
+    const { ref, focused } = useFocusable({onFocus, onEnterPress:()=>{
+      navigate('/liveTv',{state:{asset:asset}})
+    },});
+
+
+ 
+
+    const AssetWrapper = {
+
+  "display": "flex",
+  "flexdirection": "column"
+    }
+    
     const navigate=useNavigate();
-    return <FocusContext.Provider value={focusKey}><div  className={'col-3'}>
-        <img ref={ref} onClick={()=>{navigate('/liveTv',{state:{asset:props.asset}})}} className='card-img' src={props.asset.PotraitImageUrl} alt="Card image cap" />
+    return <div ref={ref} className={'col-3'} style={AssetWrapper}>
+   <h1>{focused}</h1>
+        <img  onClick={()=>{navigate('/liveTv',{state:{asset:asset}})}} className={focused ?  'card-img img-focused' : 'card-img' } src={asset.PotraitImageUrl} alt="Card image cap" />
     </div>
-    </FocusContext.Provider>
+   
 }
 
 export default ImageCard;

@@ -28,5 +28,8 @@
 }
 
 .img-focused{
-  border: 5px solid black;
+  border: 4px solid rgb(216, 83, 83);
+  transform: scale(1);
+  z-index: 1000;
+  margin: 10;
 }

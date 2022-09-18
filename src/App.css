@@ -36,3 +36,59 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+
+.ScrollingRows {
+  overflow-y: auto;
+  overflow-x: hidden;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+.ContentWrapper{
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  scroll-behavior: smooth;
+}
+
+.ContentRowScrollingWrapper  {
+  overflow-x: auto;
+  overflow-y: hidden;
+  flex-shrink: 1;
+  flex-grow: 1;
+  padding-left: 60px;
+}
+
+.ContentRowScrollingContent{
+  display: flex;
+  flex-direction: row;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.menuWrapper{
+
+  height: 500px;
+  width: 500px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+
+
+}
+
+
+
+
+
+
+
+
