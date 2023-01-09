@@ -66,7 +66,7 @@ export const  MainPage = (props)=>{
         if (response.success) {
             const pages = response.data.pages;
             if (pages.length > 0) {
-                setRails(() => pages[0].Rails)
+                setRails(() => pages[0].Rails.filter((rails)=> rails.PlatformSIDs.includes("2")))
             }
         }
     }

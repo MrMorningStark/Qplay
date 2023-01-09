@@ -14,12 +14,12 @@ const ImageCard = (props) => {
     const AssetWrapper = {
 
   "display": "flex",
-  "flexdirection": "column"
+  "flexdirection": "column",
+  "height":"180px"
     }
     
     const navigate=useNavigate();
     return <div ref={ref} className={'col-3'} style={AssetWrapper}>
-   <h1>{focused}</h1>
         <img  onClick={()=>{navigate('/liveTv',{state:{asset:asset}})}} className={focused ?  'card-img img-focused' : 'card-img' } src={asset.PotraitImageUrl} alt="Card image cap" />
     </div>
    

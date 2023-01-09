@@ -1,5 +1,5 @@
 const CMSURL = {
-    BASEURL: "http://142.93.214.96:9090/cms/"
+    BASEURL: "http://13.126.165.150:9001"
 }
 
 const GetHeader = (method = 'GET') => {
@@ -13,11 +13,11 @@ const GetHeader = (method = 'GET') => {
 export async function getLayout() {
 
     try {
-        var FINALURL = CMSURL.BASEURL + '/getLayout';
+        var FINALURL = CMSURL.BASEURL + '/layout_lg.json';
         var Finalinit = { ...GetHeader() };
-
+        console.log(FINALURL)
         const response = await fetch(FINALURL, Finalinit);
-
+        console.log(response);
         const responseData = await response.json();
 
         return responseData;
